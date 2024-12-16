@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import com.pawpengaga.model.Persona;
+import com.pawpengaga.repository.PersonaRepositorio;
 import com.pawpengaga.repository.PersonaRepository;
 
 @Controller
@@ -17,7 +18,7 @@ import com.pawpengaga.repository.PersonaRepository;
 public class PersonaController {
 
   @Autowired
-  PersonaRepository pRepo;
+  PersonaRepositorio pRepo;
 
   @GetMapping("/persona")
   public String getAll(Model model){
