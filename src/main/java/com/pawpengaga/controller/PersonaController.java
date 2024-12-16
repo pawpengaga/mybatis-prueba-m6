@@ -10,17 +10,18 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import com.pawpengaga.model.Persona;
-import com.pawpengaga.repository.PersonaRepositorio;
-import com.pawpengaga.repository.PersonaRepository;
 
 @Controller
 @RequestMapping("/")
 public class PersonaController {
 
-  @Autowired
-  PersonaRepositorio pRepo;
+  // @Autowired
+  // PersonaRepositorio pRepo;
 
-  @GetMapping("/persona")
+  @Autowired
+  PersonaMapper pRepo;
+
+  @GetMapping("/listar")
   public String getAll(Model model){
     List<Persona> listado = pRepo.findAll();
     model.addAttribute("personas", listado);

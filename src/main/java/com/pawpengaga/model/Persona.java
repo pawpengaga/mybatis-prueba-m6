@@ -11,11 +11,11 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 @Data
-@Entity
+// @Entity
 public class Persona {
 
-  @Id
-  @GeneratedValue(strategy = GenerationType.IDENTITY)
+  // @Id
+  // @GeneratedValue(strategy = GenerationType.IDENTITY)
   private Long id;
   private String nombre;
   private int edad;
