@@ -20,7 +20,7 @@ public class PersonaController {
   @Autowired
   PersonaRepositorio pRepo;
 
-  @GetMapping("/persona")
+  @GetMapping("/listar")
   public String getAll(Model model){
     List<Persona> listado = pRepo.findAll();
     model.addAttribute("personas", listado);
